@@ -14,7 +14,7 @@ Links:
     - Wireframes
         - 
     - Trello link
-        - https://trello.com/b/79qQIpKD/wdi-project-4a-jmny
+        - 
     - Heroku
         - 
 
@@ -107,39 +107,35 @@ User story:
 ---
 App Build Steps:
 
-- touch server.js --o--
+- touch server.js --x--
 
-- npm init --o--
+- npm init --x--
 	-'enter' through all the prompts
 
 - packages setup --x--
 	- npm install --save express morgan mongoose cookie-parser
 	- server.js
-		- express
+		- dependecies
 			- var express = require('express');
-			- var app = express();
-		- morgan
 			- var morgan = require('morgan');
-			- app.use(morgan('dev'));
-		- mongoose
 			- var mongoose = require('mongoose');
-			- mongoose.connect('mongodb://localhost/db_name');
-		- cookie-parser
 			- var cookieParser = require('cookie-parser');
+		- var app = express();
+		- middleware
+			- app.use(morgan('dev'));
 			- app.use(cookieParser());
+		- mongo
+			- mongoose.connect('mongodb://localhost/db_name');
 
-- check middleware setup --o--
-
-- set app port --o--
+- app port & listener --x--
 	- server.js
 		- var port = process.env.PORT || 3000;
-
-- listener setup --o--
-	- server.js
 		- app.listen(port);
 		- console.log('Silence please...');
-		- setTimeout(function(){console.log('Curtains up...')}, 1000);
-		- console.log('Server started on ' + port);
+		- setTimeout(function(){console.log('Curtains up...' + '\n' + 'Server started on ' + port)}, 1000);
+
+- test connection --o--
+    - setup basic route
 
 - mkdir public --o--
 	- server.js
