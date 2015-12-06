@@ -14,7 +14,7 @@ Links:
     - Wireframes
         - 
     - Trello link
-        - https://trello.com/b/79qQIpKD/wdi-project-4a-jmny
+        - 
     - Heroku
         - 
 

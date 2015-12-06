@@ -4,7 +4,7 @@
 var express       = require('express'),
     morgan        = require('morgan'),
     mongoose      = require('mongoose'),
-    cookieParser  = reqiore('cookie-parser');
+    cookieParser  = require('cookie-parser');
 
 var app = express();
 
@@ -12,7 +12,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 app.listen(port);
 console.log('Silence please...');
-setTimeout(function(){console.log('Curtains up...' + '\n' + 'Server started on ' + port)}, 1000);
+setTimeout(function(){console.log('Curtains up...' + '\n' + 'Server started on: ' + port)}, 1050);
 
 // MIDDLEWARE
 app.use(morgan('dev'));
