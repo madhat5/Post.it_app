@@ -36,7 +36,7 @@ angular.module('MyPosts', []).directive('ngmyposts',function(){
             self.posts.push(res.data);
             self.formPostComment = '';
           }, function error(){
-            console.log('...Error...');
+            console.log('...ERROR...');
         });
       };
 
@@ -59,8 +59,16 @@ angular.module('MyPosts', []).directive('ngmyposts',function(){
         });
       };
 
-
       // Delete post
+      this.deletePost = function(post){
+        var id = post._id;
+        self.$http.delete('/posts/' + id).then(function success (res){
+            console.log(res);
+            self.getPosts();
+          }, function error(){
+            console.log('...ERROR...')
+        });
+      };
 
     }] // close of controller
   }; // close of return object
