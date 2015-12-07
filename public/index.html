@@ -18,9 +18,11 @@
 
   <div id='content-wrapper' ngmyposts>
 
-    <form>
-      <label>Comment</label>
+    <form class='create-form'>
+      <label>Comment:</label>
       <input type='text' ng-model='my.formPostComment'>
+      <label>Author:</label>
+      <input type='text' ng-model='my.formPostAuthor'>
       <button class='create-button' id='button-create-post' ng-click='my.addPost()'>Create a Post</button>
     </form>
 
