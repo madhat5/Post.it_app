@@ -17,6 +17,7 @@ setTimeout(function(){console.log('Curtains up...' + '\n' + 'Server started on: 
 // MIDDLEWARE
 app.use(morgan('dev'));
 app.use(cookieParser());
+app.use(express.static('public'));
 
 // MONGO
 mongoose.connect('mongodb://localhost/postit')
