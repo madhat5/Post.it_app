@@ -25,7 +25,7 @@ app.use(express.static('public'));
 mongoose.connect('mongodb://localhost/postit');
 
 // MODELS
-var Post = require('./models/post')
+var Post = require('./models/post');
 
 // ROUTES/////////////////////////////////////////////////////////////////
 
@@ -37,15 +37,15 @@ var Post = require('./models/post')
 // Index
 app.get('/post', function(req, res){
   Post.find().then(function(posts){
-    console.log(posts + '\n' + (typeof posts);
-      res.send(posts)
+    console.log(posts + '\n' + (typeof posts));
+      res.send(posts);
   });
 }); // close index
 
 // Read
 app.get('/posts/:id', function(req, res){
   Post.findBydId(req.params.id).then(function(post){
-      console.log(posts + '\n' + (typeof posts);
+      console.log(posts + '\n' + (typeof posts));
       res.send(posts)
   });
 }); // close read

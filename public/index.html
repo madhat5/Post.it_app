@@ -24,7 +24,7 @@
       <button class='create-button' id='button-create-post' ng-click='my.addPost()'>Create a Post</button>
     </form>
 
-    <div class='post-board' id='post-board' ng-repeat='post in '>
+    <div class='post-board' id='post-board' ng-repeat='post in my.posts'>
       <div class='post-container'>
         {{post.comment}}
         <button ng-click="spectangular.populateForm(book)">Edit</button>
