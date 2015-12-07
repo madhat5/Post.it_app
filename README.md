@@ -101,7 +101,8 @@ User story:
 
 +features:
 
-- 
+- modal for create form
+- total posts display
 
 ---
 ---
@@ -160,13 +161,13 @@ App Build Steps:
         - var Post = mongoose.model('Post', postSchema);
         - module.exports = Post;
 
-- views build --o--
-	- views/index.html
-
 - CDN --o--
     - jquery
     - js-cookie URL 
     - Angular
+
+- views build --o--
+	- views/index.html
 
 - Story build --o--
     - server: 
