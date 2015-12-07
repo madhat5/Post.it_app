@@ -101,7 +101,9 @@ User story:
 
 +features:
 
-- 
+- modal for create form
+	- create post > show new post form
+- total posts display
 
 ---
 ---
@@ -113,17 +115,19 @@ App Build Steps:
 	-'enter' through all the prompts
 
 - packages setup --x--
-	- npm install --save express morgan mongoose cookie-parser
+	- npm install --save express morgan mongoose cookie-parser body-parser
 	- server.js
 		- dependecies
 			- var express = require('express');
 			- var morgan = require('morgan');
 			- var mongoose = require('mongoose');
 			- var cookieParser = require('cookie-parser');
+            - var bodyParser = require('body-parser');
 		- var app = express();
 		- middleware
 			- app.use(morgan('dev'));
 			- app.use(cookieParser());
+            - app.use(bodyParser.urlencoded({ extended: true}));
 		- mongo
 			- mongoose.connect('mongodb://localhost/db_name');
 
@@ -160,29 +164,17 @@ App Build Steps:
         - var Post = mongoose.model('Post', postSchema);
         - module.exports = Post;
 
-- views build --o--
-	- views/index.html
-
-- CDN --o--
-    - jquery
-    - js-cookie URL 
+- CDN --x--
+	- js-cookie URL 
     - Angular
 
-- Story build --o--
-    - server: 
-        - server.js 
-            - TEST 
-    - client: --o--
-        - TEST
-        - index.html
-        - app.js
-            - user
-            - task
+- Story build --ox--
+    - server.js
+    - public/index.html
+    - public/app.js
 
 - CSS --o--
 	- bootstrap
-
-- node server.js
 
 
 ---
@@ -192,8 +184,6 @@ Reference
 - Git merging
     - https://github.com/ga-students/wdi_lettuce_students/blob/master/w08/d02/INSTRUCTOR/git_solo.md
 
-- User auth (Stormpath)
-    - https://stormpath.com/blog/build-nodejs-express-stormpath-app/
 
 
 

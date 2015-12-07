@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var postSchema = new.mongoose.Schema({
+var postSchema = new mongoose.Schema({
 
   comment: String,
   gif: String
