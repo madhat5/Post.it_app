@@ -1,0 +1,20 @@
+.greeting {
+  text-align: center;
+}
+
+.post-board {
+  border: 5px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: black;
+  background-color: teal;
+  height: 500px;
+  width: 1000px;
+  margin: 5px;
+  margin-left: 10%;
+}
+
+.create-button {
+  margin: 5px;
+  margin-left: 49%;
+}
