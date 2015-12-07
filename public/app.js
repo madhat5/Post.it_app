@@ -1,2 +1,75 @@
 // TEST
-console.log('Test: app.js');
+// console.log('Test: app.js');
+
+angular.module('MyPosts', []).directive('ngmyposts',function(){
+
+  return {
+
+    controllerAs: 'my',
+    controller: ['$http', function PostCtrl($http){
+
+      this.$http = $http;
+      var self = this;
+      self.posts = [];
+      self.totalPosts = 0;
+
+      this.totalPosts = function() {
+
+        return self.posts.length;
+      };
+
+      // All posts
+      this.getPosts = function(){
+
+        console.log('...Gathering all posts...');
+        self.$http.get('/posts').then(function(res){
+            self.posts = res.data;
+        });
+
+        return self.posts;
+      };
+
+      // Create/Add post
+      this.addPost = function(){
+
+        self.$http.post('/posts', {comment: this.formPostComment}).then(function success(res){
+            self.posts.push(res.data);
+            self.formPostComment = '';
+          }, function error(){
+            console.log('...ERROR...');
+        });
+      };
+
+      // Edit post
+      this.populateForm = function(post){
+        self.formPostId = post._id;
+        self.formPostComment = post.comment;
+      };
+
+      this.editPost = function(){
+        var id = this.formPostId;
+        self.$http.put('/posts/' + id, {comment: this.formPostComment}).then(function success(res){
+            console.log(res);
+            self.getPosts();
+
+            self.formPostId = '';
+            self.formPostComment = '';
+          }, function error(){
+            console.log('...ERROR...');
+        });
+      };
+
+      // Delete post
+      this.deletePost = function(post){
+        var id = post._id;
+        self.$http.delete('/posts/' + id).then(function success (res){
+            console.log(res);
+            self.getPosts();
+          }, function error(){
+            console.log('...ERROR...')
+        });
+      };
+
+    }] // close of controller
+  }; // close of return object
+}); // close of angular.module
