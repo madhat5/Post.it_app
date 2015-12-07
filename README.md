@@ -134,26 +134,20 @@ App Build Steps:
 		- console.log('Silence please...');
 		- setTimeout(function(){console.log('Curtains up...' + '\n' + 'Server started on ' + port)}, 1000);
 
-- test connection --o--
+- test connection --x--
     - setup basic route
 
-- mkdir public --o--
+- mkdir public --x--
 	- server.js
 		- app.use(express.static('public'));
 	- touch public/index.html
 	- touch public/app.js
 	- touch public/style.css
 
-- mkdir views --o--
-	- server.js
-		- app.use(express.static('views'));
-	- touch views/home.html
-	- touch views/profile.html
-
-- test connection --o--
+- test connection --x--
     - setup basic route
     - setup basic index.html/app.js
-    - launch server (nodemon)    
+    - launch server (nodemon/mongod)    
 
 - views build --o--
 	- views/index.html
@@ -165,6 +159,7 @@ App Build Steps:
         - var Post = require('./models/post');
 
 - CDN --o--
+    - jquery
     - js-cookie URL 
     - Angular
         
