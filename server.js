@@ -20,7 +20,10 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 // MONGO
-mongoose.connect('mongodb://localhost/postit')
+mongoose.connect('mongodb://localhost/postit');
+
+// MODELS
+var Post = require('./models/post')
 
 // ROUTES/////////////////////////////////////////////////////////////////
 

@@ -147,29 +147,26 @@ App Build Steps:
 - test connection --x--
     - setup basic route
     - setup basic index.html/app.js
-    - launch server (nodemon/mongod)    
+    - launch server (nodemon/mongod) 
+
+- models build --x--
+    - mkdir models
+    - touch models/post.js
+    - server.js
+        - var Post = require('./models/post');
+    - post.js
+        - var mongoose = require('mongoose');
+        - var postSchema = new mongoose.Schema({ ... });
+        - var Post = mongoose.model('Post', postSchema);
+        - module.exports = Post;
 
 - views build --o--
 	- views/index.html
-
-- models build --o--
-    - mkdir models
-        - touch models/post.js
-    - server.js
-        - var Post = require('./models/post');
 
 - CDN --o--
     - jquery
     - js-cookie URL 
     - Angular
-        
-- model build --o--
-    - post.js
-        - var mongoose = require('mongoose');
-        - var userSchema = new mongoose.Schema({ ... });
-            - link taskSchema (embed or ref)
-        - var User = mongoose.model('User', userSchema);
-        - module.exports = User;
 
 - Story build --o--
     - server: 
