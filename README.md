@@ -144,7 +144,7 @@ App Build Steps:
 	- touch public/app.js
 	- touch public/style.css
 
-- test connection --o--
+- test connection --x--
     - setup basic route
     - setup basic index.html/app.js
     - launch server (nodemon/mongod)    
@@ -159,6 +159,7 @@ App Build Steps:
         - var Post = require('./models/post');
 
 - CDN --o--
+    - jquery
     - js-cookie URL 
     - Angular
         
