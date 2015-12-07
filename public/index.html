@@ -14,20 +14,18 @@
 </head>
 
 <body>
-<div ngpostit>
-
-  <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
-
-  <form>
-    <input type='text' ng-model='postit'>
-    <button class='create-button' id='button-create-post'>Create a Post</button>
-    {{ newPost }}
-  </form>
-
-  <div class='post-board' id='post-board'>
-
+  <div id='header'>
+    <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
   </div>
 
-</div>
+  <div ngpostit>
+    <input type='text' ng-model='postit.'>
+    <button class='create-button' id='button-create-post' ng-click='postit.'>Create a Post</button>
+    {{ newPost }}
+
+    <div class='post-board' id='post-board'>
+
+    </div>
+  </div>
 </body>
 </html>
