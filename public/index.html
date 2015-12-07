@@ -16,21 +16,22 @@
     <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
   </div>
 
-  <div id='content-wrapper' ngpostit>
-    <input type='text' ng-model='postit.'>
+  <div id='content-wrapper' ngmyposts>
+
     <form>
       <label>Comment</label>
-      <input type='tesxt' ng-model=''>
-      <button class='create-button' id='button-create-post' ng-click='postit.'>Create a Post</button>
+      <input type='text' ng-model='my.formPostComment'>
+      <button class='create-button' id='button-create-post' ng-click='my.addPost()'>Create a Post</button>
     </form>
 
-    <div class='post-board' id='post-board' ng-repeat='post in '>
+    <div class='post-board' id='post-board' ng-repeat='post in my.posts'>
       <div class='post-container'>
         {{post.comment}}
         <button ng-click="spectangular.populateForm(book)">Edit</button>
         <button ng-click="spectangular.deleteBook(book)">Delete</button>
       </div>
     </div>
+
   </div>
 </body>
 </html>
