@@ -40,7 +40,7 @@ app.get('/post', function(req, res){
     console.log(posts + '\n' + (typeof posts);
       res.send(posts)
   });
-});
+}); // close index
 
 // Read
 app.get('/posts/:id', function(req, res){
@@ -48,7 +48,7 @@ app.get('/posts/:id', function(req, res){
       console.log(posts + '\n' + (typeof posts);
       res.send(posts)
   });
-});
+}); // close read
 
 // Create
 app.post('/posts', function(req, res){
@@ -61,7 +61,7 @@ app.post('/posts', function(req, res){
       res.send(post)
     };
   });
-});
+}); // close create
 
 // Update
 app.put('/posts/:id', function(req, res){
@@ -72,7 +72,7 @@ app.put('/posts/:id', function(req, res){
   }, function(err, post){
     res.send(post);
   });
-})
+}) // close update
 
 // Delete
 app.delete('/posts/:id', function(req, res){
@@ -81,7 +81,7 @@ app.delete('/posts/:id', function(req, res){
     console.log('...Post has been deleted...');
     res.send('Post removed');
   });
-});
+}); // close delete
 
 // TEMP STUFF && GARBAGE//////////////////////////////////////////////////
 
