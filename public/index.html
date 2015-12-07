@@ -3,8 +3,6 @@
 <meta charset="utf-8">
 <head>
   <title>Post(it)</title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.4/js.cookie.js"></script>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -18,13 +16,20 @@
     <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
   </div>
 
-  <div ngpostit>
+  <div id='content-wrapper' ngpostit>
     <input type='text' ng-model='postit.'>
-    <button class='create-button' id='button-create-post' ng-click='postit.'>Create a Post</button>
-    {{ newPost }}
+    <form>
+      <label>Comment</label>
+      <input type='tesxt' ng-model=''>
+      <button class='create-button' id='button-create-post' ng-click='postit.'>Create a Post</button>
+    </form>
 
-    <div class='post-board' id='post-board'>
-
+    <div class='post-board' id='post-board' ng-repeat='post in '>
+      <div class='post-container'>
+        {{post.comment}}
+        <button ng-click="spectangular.populateForm(book)">Edit</button>
+        <button ng-click="spectangular.deleteBook(book)">Delete</button>
+      </div>
     </div>
   </div>
 </body>

@@ -102,6 +102,7 @@ User story:
 +features:
 
 - modal for create form
+	- create post > show new post form
 - total posts display
 
 ---
@@ -161,29 +162,17 @@ App Build Steps:
         - var Post = mongoose.model('Post', postSchema);
         - module.exports = Post;
 
-- CDN --o--
-    - jquery
-    - js-cookie URL 
+- CDN --x--
+	- js-cookie URL 
     - Angular
 
-- views build --o--
-	- views/index.html
-
 - Story build --o--
-    - server: 
-        - server.js 
-            - TEST 
-    - client: --o--
-        - TEST
-        - index.html
-        - app.js
-            - user
-            - task
+    - server.js
+    - public/index.html
+    - public/app.js
 
 - CSS --o--
 	- bootstrap
-
-- node server.js
 
 
 ---
@@ -193,8 +182,6 @@ Reference
 - Git merging
     - https://github.com/ga-students/wdi_lettuce_students/blob/master/w08/d02/INSTRUCTOR/git_solo.md
 
-- User auth (Stormpath)
-    - https://stormpath.com/blog/build-nodejs-express-stormpath-app/
 
 
 
