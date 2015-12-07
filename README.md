@@ -115,17 +115,19 @@ App Build Steps:
 	-'enter' through all the prompts
 
 - packages setup --x--
-	- npm install --save express morgan mongoose cookie-parser
+	- npm install --save express morgan mongoose cookie-parser body-parser
 	- server.js
 		- dependecies
 			- var express = require('express');
 			- var morgan = require('morgan');
 			- var mongoose = require('mongoose');
 			- var cookieParser = require('cookie-parser');
+            - var bodyParser = require('body-parser');
 		- var app = express();
 		- middleware
 			- app.use(morgan('dev'));
 			- app.use(cookieParser());
+            - app.use(bodyParser.urlencoded({ extended: true}));
 		- mongo
 			- mongoose.connect('mongodb://localhost/db_name');
 
@@ -166,7 +168,7 @@ App Build Steps:
 	- js-cookie URL 
     - Angular
 
-- Story build --o--
+- Story build --ox--
     - server.js
     - public/index.html
     - public/app.js
