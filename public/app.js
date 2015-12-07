@@ -14,11 +14,13 @@ angular.module('MyPosts', []).directive('ngmyposts',function(){
       self.totalPosts = 0;
 
       this.totalPosts = function() {
+
         return self.posts.length;
       };
 
       // All posts
       this.getPosts = function(){
+
         console.log('...Gathering all posts...');
         self.$http.get('/posts').then(function(res){
             self.posts = res.data;
@@ -28,9 +30,34 @@ angular.module('MyPosts', []).directive('ngmyposts',function(){
       };
 
       // Create/Add post
+      this.addPost = function(){
 
+        self.$http.post('/posts', {comment: this.formPostComment}).then(function success(res){
+            self.posts.push(res.data);
+            self.formPostComment = '';
+          }, function error(){
+            console.log('...Error...');
+        });
+      };
 
       // Edit post
+      this.populateForm = function(post){
+        self.formPostId = post._id;
+        self.formPostComment = post.comment;
+      };
+
+      this.editPost = function(){
+        var id = this.formPostId;
+        self.$http.put('/posts/' + id, {comment: this.formPostComment}).then(function success(res){
+            console.log(res);
+            self.getPosts();
+
+            self.formPostId = '';
+            self.formPostComment = '';
+          }, function error(){
+            console.log('...ERROR...');
+        });
+      };
 
 
       // Delete post
