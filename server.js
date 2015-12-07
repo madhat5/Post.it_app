@@ -17,6 +17,7 @@ setTimeout(function(){console.log('Curtains up...' + '\n' + 'Server started on: 
 // MIDDLEWARE
 app.use(morgan('dev'));
 app.use(cookieParser());
+app.use(express.static('public'));
 
 // MONGO
 mongoose.connect('mongodb://localhost/postit')
@@ -27,6 +28,7 @@ mongoose.connect('mongodb://localhost/postit')
 app.get('/test', function(req, res){
   res.send('Sim Sim Salabim');
 });
+
 
 
 
