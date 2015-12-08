@@ -6,8 +6,8 @@
   border: 5px;
   border-style: solid;
   border-radius: 15px;
-  border-color: black;
-  background-color: teal;
+  border-color: grey;
+  background: url('http://586c40.medialib.glogster.com/thumbnails/f6df4870d45d615cd8a32636aa74a3815c76a8f595ea5875ecd9ec7de7703c56/pinboard-glog-by-nessababe97-source.jpg');
   height: 500px;
   width: 1000px;
   margin: 5px;
@@ -17,4 +17,15 @@
 .create-form {
   margin: 25px;
   margin-left: 30%;
+}
+
+.post-container {
+  padding: 10px;
+  margin: 25px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 15px;
+  width: 200px;
+  border-color: papayawhip;
+  background: papayawhip;
 }

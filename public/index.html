@@ -27,10 +27,11 @@
     </form>
 
     <div class='post-board' id='post-board' ng-repeat='post in my.posts'>
-      <div ng-show='my.getPosts()'></div>
+      <!-- <div ng-show='my.getPosts()'></div> -->
       <div class='post-container'>
         {{post.comment}}<br>
         @{{post.author}}<br>
+        <br>
         <button ng-click="my.populateForm(post)">Edit</button>
         <button ng-click="my.deletePost(post)">Delete</button>
       </div>

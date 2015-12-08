@@ -1,8 +1,6 @@
 # PostIt Board - Final mini-Project #1 (MEAN)
 ---
 
-post = giphy? + comment?
-
 Links:
 
 - Instructions:
@@ -80,13 +78,11 @@ MVP
 Models:
 
 - post
-    - stormpath
-    - goal (embed or ref)
-    - score/points?
-        - (sum of goal.score)
+    - comment
+    - author
 
 
-User story:
+User story: (UPDATE)
 (MOAR MODALS!!!)
 
 - landing page:
