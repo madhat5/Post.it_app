@@ -46,7 +46,7 @@ app.get('/post', function(req, res){
 app.get('/posts/:id', function(req, res){
   Post.findBydId(req.params.id).then(function(post){
       console.log(posts + '\n' + (typeof posts));
-      res.send(posts)
+      res.send(post)
   });
 }); // close read
 
