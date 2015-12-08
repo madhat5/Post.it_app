@@ -28,9 +28,10 @@
 
     <div class='post-board' id='post-board' ng-repeat='post in my.posts'>
       <div class='post-container'>
-        {{post.comment}}
-        <button ng-click="spectangular.populateForm(book)">Edit</button>
-        <button ng-click="spectangular.deleteBook(book)">Delete</button>
+        {{post.comment}}<br>
+        {{post.author}}<br>
+        <button ng-click="my.populateForm(post)">Edit</button>
+        <button ng-click="my.deletePost(post)">Delete</button>
       </div>
     </div>
 
