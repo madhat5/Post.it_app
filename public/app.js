@@ -1,7 +1,7 @@
 // TEST
 // console.log('Test: app.js');
 
-angular.module('MyPosts', []).directive('ngmyposts',function(){
+angular.module('MyPosts', []).directive('ngmyposts', function(){
 
   return {
 
