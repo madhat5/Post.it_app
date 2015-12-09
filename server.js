@@ -27,6 +27,9 @@ mongoose.connect('mongodb://localhost/postit');
 // MODELS
 var Post = require('./models/post');
 
+// SEED
+// var seed = require('./seed.js');
+
 // ROUTES/////////////////////////////////////////////////////////////////
 
 // TEST ROUTE
