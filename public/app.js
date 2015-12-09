@@ -28,6 +28,7 @@ angular.module('MyPosts', []).directive('ngmyposts', function(){
 
         return self.posts;
       };
+      this.getPosts();
 
       // Create/Add post
       this.addPost = function(){

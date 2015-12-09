@@ -187,6 +187,12 @@ Reference
 ---
 Comments/Notes:
 
-- 
+- is it saving in js
+- it it making a request
+
+- tips:
+    - Kyle (dragable div)
+    - Katie Z (modal)
+    - Robbie (dynamic searches)
 
 

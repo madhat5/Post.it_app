@@ -1,3 +1,7 @@
+body {
+  background: url('http://ecx.images-amazon.com/images/I/91ltFGvBzsL._SL1500_.jpg');
+}
+
 .greeting {
   text-align: center;
 }
@@ -6,7 +10,7 @@
   border: 5px;
   border-style: solid;
   border-radius: 15px;
-  border-color: grey;
+  border-color: #502900;
   background: url('http://586c40.medialib.glogster.com/thumbnails/f6df4870d45d615cd8a32636aa74a3815c76a8f595ea5875ecd9ec7de7703c56/pinboard-glog-by-nessababe97-source.jpg');
   height: 500px;
   width: 1000px;

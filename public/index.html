@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html ng-app="MyPosts" lang="en">
 <meta charset="utf-8">
 <head>
   <title>Post(it)</title>
@@ -14,26 +14,28 @@
 <body>
   <div id='header'>
     <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
+    <h5 class='greeting'>(MEAN)</h5>
   </div>
 
   <div id='content-wrapper' ngmyposts>
 
-    <form class='create-form'>
+    <div class='create-form'>
       <label>Comment:</label>
       <input type='text' ng-model='my.formPostComment'>
       <label>Author:</label>
       <input type='text' ng-model='my.formPostAuthor'>
       <button class='create-button' id='button-create-post' ng-click='my.addPost()'>Create a Post</button>
-    </form>
+    </div>
 
-    <div class='post-board' id='post-board' ng-repeat='post in my.posts'>
-      <!-- <div ng-show='my.getPosts()'></div> -->
-      <div class='post-container'>
-        {{post.comment}}<br>
-        @{{post.author}}<br>
-        <br>
-        <button ng-click="my.populateForm(post)">Edit</button>
-        <button ng-click="my.deletePost(post)">Delete</button>
+    <div class='post-board' id='post-board'>
+      <div ng-repeat='post in my.posts'>
+        <div class='post-container'>
+          {{post.comment}}<br>
+          @{{post.author}}<br>
+          <br>
+          <button ng-click="my.populateForm(post)">Edit</button>
+          <button ng-click="my.deletePost(post)">Delete</button>
+        </div>
       </div>
     </div>
   </div>
