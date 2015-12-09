@@ -10,7 +10,7 @@ var express       = require('express'),
 var app = express();
 
 // PORT & LISTENER
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 app.listen(port);
 console.log('Silence please...');
 setTimeout(function(){console.log('Curtains up...' + '\n' + 'Server started on: ' + port)}, 1050);
@@ -35,7 +35,7 @@ var Post = require('./models/post');
 // });
 
 // Index
-app.get('/post', function(req, res){
+app.get('/posts', function(req, res){
   Post.find().then(function(posts){
     console.log(posts + '\n' + (typeof posts));
       res.send(posts);

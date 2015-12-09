@@ -173,6 +173,11 @@ App Build Steps:
 	- bootstrap
 
 
+- Remaining:
+    - debug angular
+    - fonts/draggable posts/bootstrap
+    - heroku
+
 ---
 ---
 Reference
@@ -187,8 +192,7 @@ Reference
 ---
 Comments/Notes:
 
-- is it saving in js
-- it it making a request
+- didn't have my route set right (/post instead of /posts)
 
 - tips:
     - Kyle (dragable div)

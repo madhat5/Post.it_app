@@ -23,6 +23,8 @@ angular.module('MyPosts', []).directive('ngmyposts', function(){
 
         console.log('...Gathering all posts...');
         self.$http.get('/posts').then(function(res){
+            // console.log(res);
+            // console.log(res.data);
             self.posts = res.data;
         });
 
@@ -34,6 +36,7 @@ angular.module('MyPosts', []).directive('ngmyposts', function(){
       this.addPost = function(){
 
         self.$http.post('/posts', {comment: this.formPostComment, author: this.formPostAuthor}).then(function success(res){
+            console.log(res.data);
             self.posts.push(res.data);
             self.formPostComment = '';
             self.formPostAuthor = '';
