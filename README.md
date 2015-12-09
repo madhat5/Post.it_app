@@ -175,7 +175,7 @@ App Build Steps:
 
 - Remaining:
     - debug angular
-    - fonts/draggable posts/bootstrap
+    - fonts/bootstrap/draggable posts
     - heroku
 
 ---
