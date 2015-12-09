@@ -192,6 +192,8 @@ Reference
 ---
 Comments/Notes:
 
+- !!seed worked, but user input didnt
+
 - didn't have my route set right (/post instead of /posts)
 
 - tips:
