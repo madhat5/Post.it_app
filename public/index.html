@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html ng-app="MyPosts" lang="en">
 <meta charset="utf-8">
 <head>
   <title>Post(it)</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.4/js.cookie.js"></script>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/utils/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script> -->
 
   <script type="text/javascript" src="app.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -14,24 +18,30 @@
 <body>
   <div id='header'>
     <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
+    <h5 class='greeting'>(MEAN)</h5>
   </div>
 
   <div id='content-wrapper' ngmyposts>
 
-    <form>
-      <label>Comment</label>
+    <div class='create-form'>
+      <label>Comment:</label>
       <input type='text' ng-model='my.formPostComment'>
+      <label>Author:</label>
+      <input type='text' ng-model='my.formPostAuthor'>
       <button class='create-button' id='button-create-post' ng-click='my.addPost()'>Create a Post</button>
-    </form>
-
-    <div class='post-board' id='post-board' ng-repeat='post in my.posts'>
-      <div class='post-container'>
-        {{post.comment}}
-        <button ng-click="spectangular.populateForm(book)">Edit</button>
-        <button ng-click="spectangular.deleteBook(book)">Delete</button>
-      </div>
     </div>
 
+    <div class='post-board' id='post-board'>
+      <div ng-repeat='post in my.posts'>
+        <div class='post-container'>
+          {{post.comment}}<br>
+          @{{post.author}}<br>
+          <br>
+          <button ng-click="my.populateForm(post)">Edit</button>
+          <button ng-click="my.deletePost(post)">Delete</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
