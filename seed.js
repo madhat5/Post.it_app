@@ -27,6 +27,11 @@ var post3 = new Post({
   author: 't90',
 });
 
+var post4 = new Post({
+  comment: "this being said",
+  author: 'joe',
+});
+
 var post5 = new Post({
   comment: "i'm rick james bitch",
   author: 'rick james',
